@@ -41,7 +41,7 @@ public class RingerMainActivity extends Activity {
         
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         
-        setToggleButtons();
+        setToggleButtons();	
        
         volToggleBut.setOnClickListener(new OnClickListener(){
         	
@@ -53,7 +53,13 @@ public class RingerMainActivity extends Activity {
 				if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_NORMAL) {
 					audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
 				}
-				else audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+				else {
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER, AudioManager.VIBRATE_SETTING_ON);
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_ON);
+					audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+					
+				}
+				
 				setToggleButtons();
 				
 			}
@@ -66,6 +72,12 @@ public class RingerMainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				System.out.println("Notify Toggle Pressed");
+				
+				/*
+				 * audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_OFF);
+				 * audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_ON);
+				 */
+				
 			}
 			
         });
@@ -77,9 +89,16 @@ public class RingerMainActivity extends Activity {
 				// TODO Auto-generated method stub
 				System.out.println("Vibrate Toggle Pressed");
 				if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_VIBRATE) {
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER, AudioManager.VIBRATE_SETTING_OFF);
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_OFF);
 					audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
 				}
-				else audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+				else {
+					audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER, AudioManager.VIBRATE_SETTING_ON);
+					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_ON);
+				}
+				
 				setToggleButtons();
 				
 			}

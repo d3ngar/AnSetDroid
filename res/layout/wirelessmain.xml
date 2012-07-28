@@ -65,7 +65,7 @@
             android:layout_alignLeft="@+id/TextView01"
             android:layout_below="@+id/tetherToggleBut"
             android:layout_marginTop="23dp"
-            android:text="GMS Network"
+            android:text="GSM Network"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <ToggleButton
@@ -95,6 +95,43 @@
             android:layout_alignLeft="@+id/textView3"
             android:text="Intl Data Roaming"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_below="@+id/roamToggleBut"
+            android:text="3G Network"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ToggleButton
+            android:id="@+id/threeGToggleBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:layout_alignBottom="@+id/TextView02"
+            android:layout_alignLeft="@+id/roamToggleBut"
+            android:text="ToggleButton" />
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/TextView02"
+            android:layout_below="@+id/threeGToggleBut"
+            android:layout_marginTop="22dp"
+            android:text="Mobile Network"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ToggleButton
+            android:id="@+id/mobNetToggleBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView03"
+            android:layout_alignBottom="@+id/TextView03"
+            android:layout_alignLeft="@+id/threeGToggleBut"
+            android:text="ToggleButton" />
 
     </RelativeLayout>
 
