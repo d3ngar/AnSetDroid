@@ -28,7 +28,6 @@ public class AnSetDroidActivity extends Activity implements OnClickListener {
         riSetBut = (Button) findViewById(R.id.riSetBut);
         riSetBut .setOnClickListener((android.view.View.OnClickListener) this);
         
-        
     }
     
     public void onClick (View v) {
