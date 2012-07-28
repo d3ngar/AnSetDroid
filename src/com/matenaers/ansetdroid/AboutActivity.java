@@ -14,7 +14,6 @@ public class AboutActivity extends Activity {
 	public AboutActivity() {
 		// TODO Auto-generated constructor stub
 		
-		
 	}
 
 }
