@@ -20,6 +20,7 @@ public class RingerMainActivity extends Activity {
 	}
 	
 	private void setToggleButtons() {
+		
 		if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_VIBRATE) {
         	vibrToggleBut.setChecked(true);
         }
@@ -29,10 +30,12 @@ public class RingerMainActivity extends Activity {
         	volToggleBut.setChecked(false);
         }
         else volToggleBut.setChecked(true);
+        
 	}
 	
 	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
+	    
+		super.onCreate(savedInstanceState);
         setContentView(R.layout.ringermain);
 
         volToggleBut = (ToggleButton) findViewById(R.id.volToggleBut);
@@ -44,8 +47,7 @@ public class RingerMainActivity extends Activity {
         setToggleButtons();	
        
         volToggleBut.setOnClickListener(new OnClickListener(){
-        	
-			@Override
+        	@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				System.out.println("Volume Toggle Pressed");
@@ -56,10 +58,8 @@ public class RingerMainActivity extends Activity {
 				else {
 					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER, AudioManager.VIBRATE_SETTING_ON);
 					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_ON);
-					audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
-					
+					audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);		
 				}
-				
 				setToggleButtons();
 				
 			}
@@ -67,7 +67,6 @@ public class RingerMainActivity extends Activity {
         });
         
         notifyToggleBut.setOnClickListener(new OnClickListener(){
-        	
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -83,7 +82,6 @@ public class RingerMainActivity extends Activity {
         });
 		
 		vibrToggleBut.setOnClickListener(new OnClickListener(){
-        	
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -98,7 +96,6 @@ public class RingerMainActivity extends Activity {
 					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_RINGER, AudioManager.VIBRATE_SETTING_ON);
 					audioManager.setVibrateSetting(AudioManager.VIBRATE_TYPE_NOTIFICATION, AudioManager.VIBRATE_SETTING_ON);
 				}
-				
 				setToggleButtons();
 				
 			}

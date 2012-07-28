@@ -16,6 +16,7 @@ public class AnSetDroidActivity extends Activity implements OnClickListener {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
