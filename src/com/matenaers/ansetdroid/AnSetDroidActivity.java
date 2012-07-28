@@ -46,7 +46,6 @@ public class AnSetDroidActivity extends Activity implements OnClickListener {
     		startActivity(intent);
     	}
         	
-    	
     	/*
     	 switch (v.getId()) {
     		
