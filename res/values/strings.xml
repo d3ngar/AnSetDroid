@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AnSetDroidActivity!</string>
+    <string name="app_name">AnSetDroid</string>
+    <string name="projectName">AnSetDroid</string>
+    <string name="aboutText01">This is still a pre-beta version of AnSetDroid, the most brilliant Android phone settings manager.</string>
+    <string name="aboutText02">AnSetDroid is supposed to have a github home, so it can be modified by anyone. Currently such home has not been created, so to reach out to the developer for requests and comments, use my email: d3ngar@gmail.com.</string>
+    <string name="version">This is version 0.2</string>
+
+</resources>

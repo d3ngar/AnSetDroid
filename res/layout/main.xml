@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.07" >
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/projectName"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+         <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/titleText"
+            android:layout_alignBottom="@+id/titleText"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/titleText"
+            android:text="pre-Beta Version"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/wiSetBut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/titleText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Wireless Settings" />
+
+        <Button
+            android:id="@+id/riSetBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/wiSetBut"
+            android:layout_alignRight="@+id/wiSetBut"
+            android:layout_below="@+id/wiSetBut"
+            android:text="Ringer Settings" />
+
+        <Button
+            android:id="@+id/geoSetBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/riSetBut"
+            android:layout_alignRight="@+id/riSetBut"
+            android:layout_below="@+id/riSetBut"
+            android:text="Latitude and GPS Settings" />
+
+        <Button
+            android:id="@+id/schedSetBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/geoSetBut"
+            android:layout_alignRight="@+id/geoSetBut"
+            android:layout_below="@+id/geoSetBut"
+            android:text="Scheduled Settings" />
+
+        <Button
+            android:id="@+id/savedBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/schedSetBut"
+            android:layout_alignRight="@+id/schedSetBut"
+            android:layout_below="@+id/schedSetBut"
+            android:text="Saved Settings and Priorities" />
+
+        <Button
+            android:id="@+id/helpBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/savedBut"
+            android:layout_alignRight="@+id/savedBut"
+            android:layout_below="@+id/savedBut"
+            android:text="Help" />
+
+        <Button
+            android:id="@+id/aboutBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/helpBut"
+            android:layout_alignRight="@+id/helpBut"
+            android:layout_below="@+id/helpBut"
+            android:text="About" />
+
+    </RelativeLayout>
+
+</LinearLayout>
