@@ -35,7 +35,7 @@ public class WirelessMainActivity extends Activity implements OnClickListener {
         
         wifiToggleBut = (ToggleButton) findViewById(R.id.wifiToggleBut);
         if (wifistatus) wifiToggleBut.setChecked(true);
-        else wifiToggleBut.setChecked(false);        
+        else wifiToggleBut.setChecked(false);
         
         wifiToggleBut.setOnClickListener((android.view.View.OnClickListener) this);
         
