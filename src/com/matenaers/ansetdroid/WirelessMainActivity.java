@@ -29,8 +29,7 @@ public class WirelessMainActivity extends Activity implements OnClickListener {
         
         //Getting the status for the menu items
         wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-        wifistatus = wifi.isWifiEnabled();
-        
+        wifistatus = wifi.isWifiEnabled();        
         System.out.println("Wifi is enabled : " + wifistatus);
         
         wifiToggleBut = (ToggleButton) findViewById(R.id.wifiToggleBut);
