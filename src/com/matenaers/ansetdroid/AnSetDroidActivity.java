@@ -45,8 +45,7 @@ public class AnSetDroidActivity extends Activity implements OnClickListener {
     		Intent intent = new Intent(this, RingerMainActivity.class);
     		startActivity(intent);
     	}
-        	
-    	
+        
     	/*
     	 switch (v.getId()) {
     		
