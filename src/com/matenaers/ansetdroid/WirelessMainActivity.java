@@ -20,6 +20,7 @@ public class WirelessMainActivity extends Activity implements OnClickListener {
 	
 	public WirelessMainActivity() {
 		// TODO Auto-generated constructor stub
+		
 	}
 	
 	@Override
